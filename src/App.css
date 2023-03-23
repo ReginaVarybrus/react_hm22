@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.Theme-Light {
+  height: 100vh;
+  background: #92a4b1;
+  color: #1e2025;
+}
+
+.Theme-Dark {
+  height: 100vh;
+  background: #1e2025;
+  color: #92a4b1;
+}
+
+.Button-Light {
+  height: 40px;
+  width: 150px;
+  background: #29343d;
+  color: #92a4b1;
+  border: none;
+}
+
+.Button-Dark {
+  height: 40px;
+  width: 150px;
+  background: #5a7480;
+  color: #1e2025;
+  border: none;
+}
+
+/* .Buttons {
+  width: 500px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.Buttons button {
+  height: 40px;
+  width: 150px;
+  background: #29343d;
+  color: #92a4b1;
+  border: none;
+}
