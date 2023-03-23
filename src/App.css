@@ -38,13 +38,13 @@
 }
 
 .Theme-Light {
-  height: 100vh;
+  height: 100%;
   background: #92a4b1;
   color: #1e2025;
 }
 
 .Theme-Dark {
-  height: 100vh;
+  height: 100%;
   background: #1e2025;
   color: #92a4b1;
 }
@@ -65,13 +65,14 @@
   border: none;
 }
 
-/* .Buttons {
-  width: 500px;
+.Buttons {
+  width: 460px;
+  margin: 10px;
   display: flex;
   align-content: center;
   justify-content: space-between;
   align-items: center;
-} */
+}
 
 .Buttons button {
   height: 40px;
@@ -79,4 +80,22 @@
   background: #29343d;
   color: #92a4b1;
   border: none;
+}
+
+.Hero-Card {
+  width: 400px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+    align-items: center;
+  
+    margin: 10px;
+    /* margin: auto; */
+    padding: 30px;
+    background: white;
+}
+
+.Hero-Card img {
+  height: 40px;
+  width: 40px;
 }

@@ -13,10 +13,10 @@ const PaginationProvider = (props) => {
 
         const urlParams = new URL(pageUrl);
         console.log('url =>', urlParams.href);
-        setPage = urlParams.searchParams.get('page');
-        console.log('page =>', setPage);
+        const currentPage = urlParams.searchParams.get('page');
+        console.log('page =>', currentPage);
+        setPage(currentPage);
         
-        // return setPage;
     }
 
 

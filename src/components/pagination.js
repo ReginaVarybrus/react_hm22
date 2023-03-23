@@ -9,7 +9,7 @@ class Pagination extends React.Component {
 
         this.state = {
             heros: [],
-            currentPage: 1,
+            page: 1,
             herosPerPage: 20
         }
     }
@@ -18,7 +18,8 @@ class Pagination extends React.Component {
     render() {
         return (
             <div className="Pagination">
-                <p>{this.context.currentPage}</p>
+                <p>{this.state.page}</p>
+                <p>{this.context.page}</p>
             </div>
         )
     }

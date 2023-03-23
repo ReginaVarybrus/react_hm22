@@ -36,16 +36,20 @@ const HeroList = () => {
 
     return (
         <div className="Hero-List">
-            {httpCtx.heroList?.results &&
-                httpCtx.heroList.results.map((hero) => (
-                    <HeroCard key={hero.id}>
-                        {hero.name} {hero.status}
-                    </HeroCard>
-                ))}
             <div className="Buttons">
                 <button onClick={handlerPrevPage}>Prev</button>
                 <button onClick={handlerNextPage}>Next</button>
             </div>
+            {httpCtx.heroList?.results &&
+                httpCtx.heroList.results.map((hero) => (
+                    <HeroCard key={hero.id} className="Hero-Card">
+                        <div>
+                            <p>{hero.name}</p>
+                            <p>{hero.status}</p>
+                        </div>
+                        <img src={hero.image}></img>
+                    </HeroCard>
+                ))}
         </div>
     )
 }
