@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { HttpHerosContext } from "./httpContext";
-import HttpUrl from './constURLpath';
+import { HttpHerosContext } from "./HttpContext";
 
 const HttpHerosProvider = (props) => {
     const [heroList, setHeroList] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
 
-    useEffect(() => fetchHeros(HttpUrl), []);
+    const HttpUrl = `https://rickandmortyapi.com/api/character?page=${currentPage}`;
+
+    useEffect(() => fetchHeros(HttpUrl), [currentPage]);
 
     const fetchHeros = (pageUrl) => {
         fetch(pageUrl)
@@ -14,10 +16,16 @@ const HttpHerosProvider = (props) => {
             .catch(err => console.log('Error'))
     };
 
+    const getPageNumber = (pageNumber) => {
+        setCurrentPage(pageNumber);
+    }
+
     const getHeroCtx = () => {
         return {
             heroList,
-            fetchHeros
+            fetchHeros,
+            currentPage,
+            getPageNumber
         }
     };
 

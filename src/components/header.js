@@ -1,7 +1,7 @@
 import '../css/toggler.css';
 
-import { useContext  } from "react";
-import { ThemeContext } from "../providers/themeContext";
+import { useContext } from "react";
+import { ThemeContext } from "../providers/ThemeContext";
 
 const Header = () => {
     const themeCtx = useContext(ThemeContext);
@@ -11,13 +11,7 @@ const Header = () => {
     }
     return (
         <div>
-            {/* <label className="switch">
-              <input type="checkbox" checked />
-              <span className="slider round"></span>
-            </label> */}
-            <button onClick={handleThemeChange} className={themeCtx.theme ? 'Button-Light' : 'Button-Dark'}>
-                Change theme to {themeCtx.theme ? 'Light' : 'Dark'}
-            </button>
+            <input onClick={handleThemeChange} type="checkbox"></input>
         </div>
     )
 }

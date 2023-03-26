@@ -1,18 +1,15 @@
 import './App.css';
 
-import HomePage from './components/homePage';
-import ThemeProvider from './providers/chaningTheme';
-import HttpHerosProvider from './providers/httpProvider';
-import PaginationProvider from './providers/paginationProvider';
+import HomePage from './components/HomePage';
+import ThemeProvider from './providers/ChaningTheme';
+import HttpHerosProvider from './providers/HttpProvider';
 
 function App() {
   return (
     <div className="App">
       <ThemeProvider>
         <HttpHerosProvider>
-          <PaginationProvider>
             <HomePage />
-          </PaginationProvider>
         </HttpHerosProvider>
       </ThemeProvider>
     </div>
