@@ -36,7 +36,7 @@ class Pagination extends React.Component {
         console.log(this.context.heroList.info, this.context.currentPage);
         return (
             <div className="Pagination">
-                    <button onClick={this.handlerPrevPage} >Prev</button>
+                    <button onClick={this.handlerPrevPage} disabled={this.context.heroList.info?.prev === null}>Prev</button>
                     <ul className="Pagination-list">
                         {this.pagination().map((page) => (
                             <li
@@ -46,7 +46,7 @@ class Pagination extends React.Component {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={this.handlerNextPage} >Next</button>
+                    <button onClick={this.handlerNextPage} disabled={this.context.heroList.info?.next === null}>Next</button>
             </div>
         )
     }
